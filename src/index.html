@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <script type="module" src="./index.js"></script>
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@1,600&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/example.html"></include> -->
+
+    <div class="search-bar">
+      <form class="search-form" id="search-form">
+        <input
+          class="search-bar-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="search-bar-btn">
+          <svg width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="gallery"></div>
+
+    <button class="load-more-btn">Load more</button>
   </body>
 </html>
